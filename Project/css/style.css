@@ -8,13 +8,12 @@
 }
 
 body {
-
     height: 100vh;
     display: grid;
     grid-template-rows: 60px 1fr 60px;
-    background: #4b4b4b;
+    background: radial-gradient(circle at 20% 20%, #1c1c1c 0%, #2a2a2a 40%, #0c0c0c 100%);
+    color: white;
 }
-
 /* TOP NAV */
 .topnav {
     background: #1f1f1f;
@@ -71,6 +70,7 @@ body {
 
 .start-btn:hover {
     transform: scale(1.07);
+     box-shadow: 0 12px 35px rgba(0,0,0,0.7);
 }
 
 /* FOOTER */
