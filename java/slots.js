@@ -6,6 +6,10 @@ let testNum = 13;
 
 // steps
 function play() {
+    if (Money <= 0) {
+        alert("Niet genoeg saldo!");
+        return
+    }
     Placebet()
     SpinMachine()
     CheckResult()
@@ -34,7 +38,7 @@ function CheckResult(){
 
     if( isWinningNumber ){
         console.log("win");
-        Money += bet*2;
+        Money += bet*6;
         console.log(Money)
     }else{
         console.log("loser");
