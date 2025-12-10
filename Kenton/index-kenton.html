@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoger/Lager</title>
+    <link rel="stylesheet" href="/Kenton/css/style-kenton.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hud">
+        <div>Score: <span id="score">0</span></div>
+        <div>Levens: <span id="lives">3</span></div>
+      </div>
+      <h1>Hoger / Lager</h1>
+    </header>
+
+    <main class="board">
+      <div class="side">
+        <button id="lower">Lager</button>
+      </div>
+
+      <div class="card-area">
+        <div id="card" class="card">
+          <div class="card-front">
+            <div class="corner top-left">
+              <span class="rank" id="rankTL">A</span
+              ><span class="suit" id="suitTL">♠</span>
+            </div>
+            <div class="center-suit" id="centerSuit">♠</div>
+            <div class="corner bottom-right">
+              <span class="rank" id="rankBR">A</span
+              ><span class="suit" id="suitBR">♠</span>
+            </div>
+          </div>
+
+          <div class="card-back" aria-hidden="true">
+            <div class="back-pattern"></div>
+          </div>
+        </div>
+
+        <div id="msg" class="msg">Klik hoger of lager</div>
+      </div>
+
+      <div class="side">
+        <button id="higher">Hoger</button>
+      </div>
+    </main>
+
+    <footer>
+      <button id="reset">Reset</button>
+    </footer>
+
+    <script src="script-kenton.js"></script>
+  </body>
+</html>
