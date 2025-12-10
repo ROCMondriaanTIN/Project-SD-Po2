@@ -4,8 +4,6 @@ let WinStreak = 0;
 let WinRate = [13, 27, 31, 45, 50, 64, 79, 88, 96, 100, 105];
 let testNum = 13;
 
-document.querySelector("SpinButton").onClick = 
-
 // steps
 function play() {
     Placebet()
@@ -30,7 +28,7 @@ function CheckResult(){
     let isWinningNumber = false
 
     for (let i = 0; i < WinRate.length; i++) {
-        if( testNum === WinRate[i] ) 
+        if( WinNum === WinRate[i] ) 
             isWinningNumber = true
     }
 
@@ -57,5 +55,3 @@ Num2 = Math.floor(Math.random() * 35) + 1;
 Num3 = Math.floor(Math.random() * 35) + 1;
 WinNum = Num1 + Num2 + Num3;
 }
-
-play();
