@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoldenGrin</title>
 
-    <link rel="stylesheet" href="css/slots.css">
+    <link rel="stylesheet" href="slots.html">
 
-    <script src="java/slots.js"></script>
+    <script src="slots2.js"></script>
 
 </head>
 <body>
 
-    <button id="SpinButton" onclick="play()">Spin</button>
-    
+    <div class="spinButton">
+        <button id="SpinButton" onclick="play()">Spin</button>
+    </div>
+
+    <div class="betInput">
+        <input id="betBox" type="number">
+        <button onclick="betInput()">Bet</button>
+    </div>
+
 </body>
 <script>
 
