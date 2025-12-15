@@ -1,6 +1,7 @@
 let Money = 1000;
 let WinRate = [17, 18, 19, 20, 21];
 let bet = 5;
+let testNum =  10000;
 
 // screen cast
 console.log(Money);
@@ -13,7 +14,11 @@ function Placebet(){
 }
 
 function play() {
-    if (Money < bet) { alert("Niet genoeg saldo!"); return }
+    if (Money < bet) { 
+        alert("Niet genoeg saldo!");
+        AddMoney();
+        return;
+    }
     SpinMachine()
     showSpin()
 }
@@ -36,12 +41,12 @@ function SpinMachine(){
 
     if(mageWin === 10000){
         console.log("Mega Jackpot!!!");
-        Money += bet*5000 + bet;
+        Money += bet*5000;
         console.log(Money);
     }else{
         if(bigWin === 2000){
             console.log("jackpot!!!");
-            Money += bet*1000 + bet;
+            Money += bet*1000;
             console.log(Money);
 
         }else{
@@ -71,6 +76,16 @@ function NumberGeneration(){
 
     bigWin = Math.floor(Math.random() * 2000) + 1;
     mageWin = Math.floor(Math.random() * 10000) + 1;
+}
+
+function AddMoney(){
+    if(Money === 0){
+    alert("laad saldo");
+    Money += 1000;
+    console.log(Money);
+    }else{
+        alert("je hebt nog: $" + Money);
+    }
 }
 
 function showSpin(){
