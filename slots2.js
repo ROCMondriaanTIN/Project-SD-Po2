@@ -9,8 +9,6 @@ console.log(Money);
 // main
 function Placebet(){
     betInput()
-    takeBet()
-    console.log(Money);
 }
 
 function play() {
@@ -88,6 +86,9 @@ function AddMoney(){
     }
 }
 
-function showSpin(){
+// cenection to html
+document.querySelector("#I1").addEventListener("click", play);
+document.querySelector("#I2").addEventListener("click", Placebet);
+document.querySelector("#I3").addEventListener("click", AddMoney);
 
-}
+// show in html
