@@ -5,6 +5,7 @@ let testNum =  10000;
 
 // screen cast
 console.log(Money);
+showInHtmlMoney();
 
 // main
 function Placebet(){
@@ -15,10 +16,12 @@ function play() {
     if (Money < bet) { 
         alert("Niet genoeg saldo!");
         AddMoney();
+        showInHtmlMoney();
         return;
     }
     SpinMachine()
-    showSpin()
+    showInHtmlMoney();
+    hideVerdict()
 }
 
 // additionalcode
@@ -39,11 +42,13 @@ function SpinMachine(){
 
     if(mageWin === 10000){
         console.log("Mega Jackpot!!!");
+        document.querySelector("#I5").textContent = "Mega Jackpot!!";
         Money += bet*5000;
         console.log(Money);
     }else{
         if(bigWin === 2000){
             console.log("jackpot!!!");
+            document.querySelector("#I5").textContent = "Jackpot!!";
             Money += bet*1000;
             console.log(Money);
 
@@ -57,10 +62,12 @@ function SpinMachine(){
 
             if( isWinningNumber ){
                 console.log("win");
+                document.querySelector("#I5").textContent = "Win!";
                 Money += bet*2 + bet;
                 console.log(Money);
             }else{
                 console.log("loser");
+                document.querySelector("#I5").textContent = "loser!";
                 console.log(Money);
             }
         }
@@ -77,7 +84,7 @@ function NumberGeneration(){
 }
 
 function AddMoney(){
-    if(Money === 0){
+    if(Money <= 10){
     alert("laad saldo");
     Money += 1000;
     console.log(Money);
@@ -87,8 +94,19 @@ function AddMoney(){
 }
 
 // cenection to html
+
 document.querySelector("#I1").addEventListener("click", play);
 document.querySelector("#I2").addEventListener("click", Placebet);
 document.querySelector("#I3").addEventListener("click", AddMoney);
 
 // show in html
+function showInHtmlMoney(){
+    document.querySelector("#I4").textContent = "Saldo: $" + Money;
+}
+
+function hideVerdict(){
+
+}
+
+// result icone html show
+
