@@ -41,12 +41,16 @@ function SpinMachine(){
     NumberGeneration()
 
     if(mageWin === 10000){
+        ShowSlotMegaWin()
+
         console.log("Mega Jackpot!!!");
         document.querySelector("#I5").textContent = "Mega Jackpot!!";
         Money += bet*5000;
         console.log(Money);
     }else{
         if(bigWin === 2000){
+            ShowSlotBigWin()
+
             console.log("jackpot!!!");
             document.querySelector("#I5").textContent = "Jackpot!!";
             Money += bet*1000;
@@ -61,11 +65,15 @@ function SpinMachine(){
             }
 
             if( isWinningNumber ){
+                ShowSlotWin()
+
                 console.log("win");
                 document.querySelector("#I5").textContent = "Win!";
                 Money += bet*2 + bet;
                 console.log(Money);
             }else{
+                ShowSlotLose()
+
                 console.log("loser");
                 document.querySelector("#I5").textContent = "loser!";
                 console.log(Money);
@@ -94,7 +102,6 @@ function AddMoney(){
 }
 
 // cenection to html
-
 document.querySelector("#I1").addEventListener("click", play);
 document.querySelector("#I2").addEventListener("click", Placebet);
 document.querySelector("#I3").addEventListener("click", AddMoney);
@@ -104,9 +111,82 @@ function showInHtmlMoney(){
     document.querySelector("#I4").textContent = "Saldo: $" + Money;
 }
 
-function hideVerdict(){
-
+function hideVerdict() {
+  setTimeout(function Hide() {
+    document.querySelector("#I5").textContent = "";
+  }, 500);
 }
 
 // result icone html show
 
+function SpinEffect(){
+
+}
+
+function ShowSlotMegaWin(){
+document.querySelector("#s1").textContent = "🍀";
+document.querySelector("#s2").textContent = "🍀";
+document.querySelector("#s3").textContent = "🍀";
+}
+
+function ShowSlotBigWin(){
+document.querySelector("#s1").textContent = "⭐";
+document.querySelector("#s2").textContent = "⭐";
+document.querySelector("#s3").textContent = "⭐";
+}
+
+function ShowSlotWin(){
+document.querySelector("#s1").textContent = "🪙";
+document.querySelector("#s2").textContent = "🪙";
+document.querySelector("#s3").textContent = "🪙";
+}
+
+function ShowSlotLose(){
+let RI = Math.floor(Math.random() * 10) + 1;
+
+    if (RI === 1) {
+        document.querySelector("#s1").textContent = "🪙";
+        document.querySelector("#s2").textContent = "🪙";
+        document.querySelector("#s3").textContent = "⭐";
+    }
+    else if (RI === 2) {
+        document.querySelector("#s1").textContent = "⭐";
+        document.querySelector("#s2").textContent = "⭐";
+        document.querySelector("#s3").textContent = "🍀";
+    }
+    else if (RI === 3) {
+        document.querySelector("#s1").textContent = "🍀";
+        document.querySelector("#s2").textContent = "🍀";
+        document.querySelector("#s3").textContent = "🪙";
+    }
+    else if (RI === 4) {
+        document.querySelector("#s1").textContent = "🪙";
+        document.querySelector("#s2").textContent = "⭐";
+        document.querySelector("#s3").textContent = "🪙";
+    }
+    else if (RI === 5) {
+        document.querySelector("#s1").textContent = "⭐";
+        document.querySelector("#s2").textContent = "🍀";
+        document.querySelector("#s3").textContent = "⭐";
+    }
+    else if (RI === 6) {
+        document.querySelector("#s1").textContent = "🍀";
+        document.querySelector("#s2").textContent = "🪙";
+        document.querySelector("#s3").textContent = "🍀";
+    }
+    else if (RI === 7) {
+        document.querySelector("#s1").textContent = "🪙";
+        document.querySelector("#s2").textContent = "⭐";
+        document.querySelector("#s3").textContent = "🍀";
+    }
+    else if (RI === 8) {
+        document.querySelector("#s1").textContent = "⭐";
+        document.querySelector("#s2").textContent = "🍀";
+        document.querySelector("#s3").textContent = "🪙";
+    }
+    else {
+        document.querySelector("#s1").textContent = "🍀";
+        document.querySelector("#s2").textContent = "🪙";
+        document.querySelector("#s3").textContent = "⭐";
+    }   
+}
