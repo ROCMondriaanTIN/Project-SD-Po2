@@ -172,3 +172,8 @@ standBtn.addEventListener("click", () => {
     moneyDisplay.textContent = money;
 });
 
+document.querySelector("#quitBtn").addEventListener("click", function () {
+  window.location.href = "Home/index-start.html";
+});
+
+

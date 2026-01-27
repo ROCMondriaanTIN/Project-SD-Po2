@@ -58,7 +58,8 @@ body {
 .chip.green { background: #1b8f3a; }
 .chip.red { background: #c62828; }
 .chip.black { background: #111; }
-
+.chip.purple { background: #9d00ff; }
+.chip.yellow { background: #fbff00; color: black; }
 /* Kaarten */
 .hand {
     display: flex;
@@ -120,7 +121,7 @@ body {
     background: #ffdd55;
 }
 
-/* EFFECT MESSAGE (WIN/LOSE/DRAW) */
+/* (WIN/LOSE/DRAW) */
 #effect-message {
     position: absolute;
     top: 45%;
@@ -156,4 +157,15 @@ body {
     background: rgba(92, 92, 92, 0.4);
     color: #9a9a9a;
     text-shadow: 0 0 20px #676767;
+}
+/* Zorg dat je card container relative is */
+.game-card {
+  position: relative;
+}
+
+/* Quit button linksboven */
+.quit-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
