@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>DICE Game — Sebri</title>
+		<link rel="stylesheet" href="style7.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>DICE Game — Stake versie 🎲</h1>
+
+			<section class="status">
+				<div class="balance">Saldo: <strong id="balance">0</strong> €</div>
+				<div class="controls">
+					<label for="stake">Inzet (€):</label>
+					<input id="stake" type="number" min="1" step="1" value="10" />
+
+					<label for="risk">Risk (%): <span id="risk-val">50</span>%</label>
+					<input id="risk" type="range" min="1" max="95" value="50" />
+
+					<!-- NIEUW: multiplier + payout weergave -->
+					<div class="mult-info" aria-hidden="true">
+						<div>Multiplier: <strong id="multiplierOut">1.00×</strong></div>
+						<div>Terug bij winst: <strong id="payoutOut">10.00€</strong></div>
+					</div>
+
+					<button id="go">GO</button>
+					<button id="reset">Reset</button>
+				</div>
+			</section>
+
+			<section class="play-area">
+				<div class="bar">
+					<div class="bar-label">Resultaat</div>
+					<div class="bar-track" aria-hidden="true">
+						<div id="bar-fill" class="bar-fill"></div>
+						<div id="bar-threshold" class="bar-threshold"></div>
+					</div>
+					<div id="bar-text" class="bar-text">—</div>
+				</div>
+			</section>
+
+			<section class="message">
+				<div id="message">Voer een inzet in en druk op <strong>GO</strong>.</div>
+			</section>
+
+			<section class="history">
+				<h3>Laatste rondes</h3>
+				<ul id="history"></ul>
+			</section>
+
+			<div id="celebrate" class="celebrate" aria-hidden="true">🎉</div>
+		</main>
+
+		<script src="script7.js"></script>
+	</body>
+</html>
