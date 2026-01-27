@@ -1,0 +1,111 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== KLEUREN ===== */
+:root {
+    --bg: #063015;
+    --red: #BD2B09;
+    --gold: #E6D24E;
+}
+
+/* ===== BODY ===== */
+body {
+    background: var(--bg);
+    color: white;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 20px;
+}
+
+.logo {
+    width: 80px;
+}
+
+h1, h2 {
+    color: var(--gold);
+}
+
+/* ===== NAV ===== */
+nav {
+    background: var(--red);
+    padding: 12px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: var(--gold);
+}
+
+/* ===== KAART (slot + rules hergebruik) ===== */
+.slotMachine,
+.container {
+    background: var(--red);
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ===== REELS ===== */
+.reel {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: black;
+
+    width: 70px;
+    height: 70px;
+    margin: 8px;
+
+    font-size: 35px;
+    border-radius: 8px;
+}
+
+/* ===== INPUT + BUTTON ===== */
+input,
+button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    margin: 6px;
+}
+
+button {
+    background: var(--gold);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* ===== TEKST ===== */
+.MonyCount {
+    color: var(--gold);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.regel-alinia,
+.uitleg-alinia {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
