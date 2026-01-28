@@ -1,6 +1,6 @@
 let balance = 100;
 const balanceText   = document.querySelector("#balance");
-const stakeInput    = document.querySelector("#stake");
+const stakeInput    = document.querySelector("#stake");  //Stake = INZET
 const riskInput     = document.querySelector("#risk");
 const riskValue     = document.querySelector("#riskValue");
 const goButton      = document.querySelector("#go");
@@ -13,20 +13,20 @@ const payoutTxt     = document.querySelector("#payout");
 
 
 function updateInfo() {
-  let risk = Number(riskInput.value);
-  let stake = Number(stakeInput.value);
+  let risk = Number(riskInput.value);  //risk slider value
+  let stake = Number(stakeInput.value); //inzet waarde
 
-  riskValue.textContent = risk;
+  riskValue.textContent = risk;  //ziet hoeveel hij heeft gekozen
 
   let multiplier = 1 + (100 - risk) / 50;
   multiplierTxt.textContent = multiplier.toFixed(2) + "×";
 
   let payout = stake * multiplier;
-  payoutTxt.textContent = payout.toFixed(2) + "€";
+  payoutTxt.textContent = payout.toFixed(2) + "€"; //tofix 2 cijfers na de komma
 }
 
 function playGame() {
-  let stake = Number(stakeInput.value);
+  let stake = Number(stakeInput.value);  //zet naar number
   let risk = Number(riskInput.value);
 
   if (stake <= 0) {
@@ -41,8 +41,8 @@ function playGame() {
 
   let roll = Math.floor(Math.random() * 100) + 1;
 
-  rollText.textContent = "Roll: " + roll;  // Toon roll
-  barFill.style.width = roll + "%";
+  rollText.textContent = "Roll: %" + roll;  // Toon roll
+  barFill.style.width = roll + "%"; // Update balk
 
   if (roll <= risk) {
     let multiplier = 1 + (100 - risk) / 50;
