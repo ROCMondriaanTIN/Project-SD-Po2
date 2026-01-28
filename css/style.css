@@ -90,6 +90,8 @@ button {
     background: var(--gold);
     font-weight: bold;
     cursor: pointer;
+    border: #BD2B09
+;
 }
 
 button:hover {
@@ -108,4 +110,3 @@ button:hover {
     margin-top: 10px;
     line-height: 1.5;
 }
-
