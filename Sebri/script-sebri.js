@@ -1,5 +1,7 @@
+// Start saldo
 let balance = 100;
 
+// Elementen ophalen (ALLEEN querySelector)
 const balanceText   = document.querySelector("#balance");
 const stakeInput    = document.querySelector("#stake");
 const riskInput     = document.querySelector("#risk");
@@ -12,25 +14,23 @@ const rollText      = document.querySelector("#rollText");
 const multiplierTxt = document.querySelector("#multiplier");
 const payoutTxt     = document.querySelector("#payout");
 
-// Info updaten (risk, multiplier, payout)
+
 function updateInfo() {
   let risk = Number(riskInput.value);
   let stake = Number(stakeInput.value);
 
-  riskValue.textContent = risk;  // Risk tekst
+  riskValue.textContent = risk;
 
   let multiplier = 1 + (100 - risk) / 50;
-  multiplierTxt.textContent = multiplier.toFixed(2) + "×";   // Multiplier berekenen
+  multiplierTxt.textContent = multiplier.toFixed(2) + "×";
 
- 
   let payout = stake * multiplier;
-  payoutTxt.textContent = payout.toFixed(2) + "€";  // Payout berekenen
-}  
-
+  payoutTxt.textContent = payout.toFixed(2) + "€";
+}
 
 function playGame() {
   let stake = Number(stakeInput.value);
-  let risk = Number(riskInput.value);  
+  let risk = Number(riskInput.value);
 
   if (stake <= 0) {
     message.textContent = "Inzet moet groter zijn dan 0";
@@ -42,15 +42,13 @@ function playGame() {
     return;
   }
 
+  let roll = Math.floor(Math.random() * 100) + 1;
 
-  let roll = Math.floor(Math.random() * 100) + 1;   // Random getal tussen 1 en 100
-
-  rollText.textContent = "Roll: " + roll;   // Toon roll
+  rollText.textContent = "Roll: " + roll;  // Toon roll
   barFill.style.width = roll + "%";
 
-
   if (roll <= risk) {
-    let multiplier = 1 + (100 - risk) / 50;   // Win of verlies
+    let multiplier = 1 + (100 - risk) / 50;
     let winAmount = stake * multiplier;
 
     balance = balance + winAmount - stake;
@@ -62,21 +60,17 @@ function playGame() {
 
   balanceText.textContent = Math.round(balance);   // Update saldo
 }
-
-// Reset spel
-function resetGame()  {
+function resetGame() {
   balance = 100;
   balanceText.textContent = balance;
   barFill.style.width = "0%";
   rollText.textContent = "—";
-  message.textContent = "Spel gereset"; 
+  message.textContent = "Spel gereset";
 }
 
-// Events
 goButton.addEventListener("click", playGame);
 resetButton.addEventListener("click", resetGame);
 riskInput.addEventListener("input", updateInfo);
 stakeInput.addEventListener("input", updateInfo);
 
-// Startwaarden
 updateInfo();
