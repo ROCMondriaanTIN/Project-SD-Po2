@@ -1,53 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DICE Risk Game - Sebri</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Risk Game</title>
   <link rel="stylesheet" href="style-sebri.css">
 </head>
 <body>
-  <main class="container">
-    <h1>DICE Risk Game</h1>
 
-    <section class="status">
-      <div>Saldo: <strong id="balance">0</strong>€</div>
-      <div id="message" class="message">Plaats inzet en druk GO.</div>
-    </section>
+  <div id="game">
+    <h1>Dice Risk Game</h1>
 
-    <section class="controls">
-      <label>
-        Inzet (€)
-        <input id="stake" type="number" min="1" value="1">
-      </label>
+    <p>Saldo: <strong id="balance">100</strong> €</p>
+    <p id="message">Plaats je inzet en klik GO</p>
 
-      <label>
-        Risk (%) <span id="risk-val">20</span>%
-        <input id="risk" type="range" min="1" max="95" value="">
-      </label>
+    <label>
+      Inzet (€)
+      <input type="number" id="stake" value="1" min="1">
+    </label>
 
-      <button id="go">GO</button>
-      <button id="reset">Reset</button>
-    </section>
+    <label>
+      Risk (%)
+      <input type="range" id="risk" min="1" max="95" value="20">
+      <span id="riskValue">20</span>%
+    </label>
 
-    <section class="bar">
-      <div class="bar-label">Risk lijn (sleep of klik)</div>
-      <div class="bar-track" id="risk-track">
-        <div id="bar-preview" class="bar-preview"></div>
-        <div id="bar-fill" class="bar-fill" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-        <div id="bar-threshold" class="bar-threshold" tabindex="0">
-        </div>
-      </div>
-      <div id="bar-text" class="bar-text">—</div>
-    </section>
+    <button id="go">GO</button>
+    <button id="reset">Reset</button>
 
-    <section class="outputs">
-      <div>Multiplier: <span id="multiplierOut">1×</span></div>
-      <div>Payout (bij winst): <span id="payoutOut">0.00€</span></div>
-    </section>
+    <div class="bar">
+      <div class="bar-fill" id="barFill"></div>
+    </div>
 
-    <div id="celebrate" class="celebrate">🎉</div>
-  </main>
- <script src="script-sebri.js"></script>
+    <p id="rollText">—</p>
+
+    <p>Multiplier: <span id="multiplier">1.0×</span></p>
+    <p>Payout bij winst: <span id="payout">0.00€</span></p>
+  </div>
+
+  <script src="index-sebri.html"></script>
 </body>
 </html>
