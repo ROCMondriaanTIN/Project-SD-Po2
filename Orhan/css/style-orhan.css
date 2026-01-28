@@ -14,14 +14,14 @@ body {
     background: radial-gradient(circle at center, #0b5d2a 0%, #053016 60%, #020f06 100%);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
     text-align: center;
     position: relative;
 }
 
-/* Geld display */
+
 .money-box {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     padding: 15px;
     border-radius: 10px;
     font-size: 22px;
@@ -47,7 +47,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin: 10px;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.6);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
     transition: transform .1s ease;
 }
 
@@ -55,11 +55,27 @@ body {
     transform: translateY(3px);
 }
 
-.chip.green { background: #1b8f3a; }
-.chip.red { background: #c62828; }
-.chip.black { background: #111; }
-.chip.purple { background: #9d00ff; }
-.chip.yellow { background: #fbff00; color: black; }
+.chip.green {
+    background: #1b8f3a;
+}
+
+.chip.red {
+    background: #c62828;
+}
+
+.chip.black {
+    background: #111;
+}
+
+.chip.purple {
+    background: #9d00ff;
+}
+
+.chip.yellow {
+    background: #fbff00;
+    color: black;
+}
+
 /* Kaarten */
 .hand {
     display: flex;
@@ -77,7 +93,7 @@ body {
     padding: 8px;
     font-family: "Georgia", serif;
     position: relative;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     transform: translateY(-40px) scale(0.8);
     opacity: 0;
     transition: 0.4s ease;
@@ -88,8 +104,13 @@ body {
     opacity: 1;
 }
 
-.card.red { color: #c01818; }
-.card.black { color: #111; }
+.card.red {
+    color: #c01818;
+}
+
+.card.black {
+    color: #111;
+}
 
 .rank {
     font-size: 22px;
@@ -103,7 +124,6 @@ body {
     right: 8px;
 }
 
-/* Buttons */
 .controls button {
     padding: 12px 25px;
     margin: 10px;
@@ -121,7 +141,6 @@ body {
     background: #ffdd55;
 }
 
-/* (WIN/LOSE/DRAW) */
 #effect-message {
     position: absolute;
     top: 45%;
@@ -158,14 +177,13 @@ body {
     color: #9a9a9a;
     text-shadow: 0 0 20px #676767;
 }
-/* Zorg dat je card container relative is */
+
 .game-card {
-  position: relative;
+    position: relative;
 }
 
-/* Quit button linksboven */
 .quit-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }

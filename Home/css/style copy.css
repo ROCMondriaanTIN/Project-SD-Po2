@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 1fr 60px;
+  background: radial-gradient(
+    circle at 20% 20%,
+    #1c1c1c 0%,
+    #2a2a2a 40%,
+    #0c0c0c 100%
+  );
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.content {
+    display: block;             
+    padding: 40px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-shadow: 0 0 8px rgba(255,255,255,0.15);
+}
+
+.content h2:first-of-type {
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #d0d0d0;
+}
+
+.content hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 35px 0;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 6px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+.topnav {
+  background: #1f1f1f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.topnav .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.topnav ul li a {
+  text-decoration: none;
+  color: #cccccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.topnav ul li a:hover,
+.topnav ul li a.active {
+  background: #747474;
+  color: #000;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-btn {
+  background: linear-gradient(90deg, #8f8f8f, #6a6a6a);
+  padding: 20px 60px;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #000;
+  transition: 0.2s;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.start-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.footer {
+  background: #1f1f1f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -162,7 +162,7 @@ standBtn.addEventListener("click", () => {
         money += bet * 2;   // inzet + winst
     } else if (p < d) {
         showEffect("lose", "LOSE!");
-        // niets toevoegen, inzet is al afgetrokken
+   
     } else {
         showEffect("draw", "DRAW");
         money += bet;       // inzet terug
