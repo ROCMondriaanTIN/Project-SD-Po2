@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldenGrin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/skullyLogo-0.2.png" alt="GoldenGrin Logo" class="logo">
+        <h1>GoldenGrin Slot Machine</h1>
+    </header>
+
+    <nav>
+            <a href="rules.html" class="link">rules</a>
+            <a href="slots.html" class="link">Slots</a>
+    </nav>
+    
+    <div class="slotMachine">
+
+        <div class="reel">
+            <p id="s1">❓</p>
+        </div>
+
+        <div class="reel">
+            <p id="s2">❓</p>
+        </div>
+
+        <div class="reel">
+            <p id="s3">❓</p>
+        </div>
+
+        <div class="spinButton">
+            <button id="I1">Spin</button>
+        </div>
+
+        <div class="betInput">
+            <input id="betBox" type="number" placeholder="Bet amount">
+            <button id="I2">Bet</button>
+        </div>
+
+        <div class="money">
+            <p id="I4" class="MonyCount">0</p>
+            <button id="I3">Add money</button>
+        </div>
+
+        <div class="resultMessage">
+            <p id="I5" class="WinLos"></p>
+        </div>
+
+    </div>
+
+    <script src="java/slots2.js"></script>
+
+</body>
+</html>
