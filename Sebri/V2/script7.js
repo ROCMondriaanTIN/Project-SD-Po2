@@ -4,18 +4,18 @@
 	const LS_KEY = 'sebri_balance_v2'; // sleutel voor localStorage opslag
 
 	// ====== Element-referenties ======
-	const balanceEl = document.getElementById('balance'); // toont huidig saldo
-	const stakeInput = document.getElementById('stake'); // input voor inzet
-	const riskInput = document.getElementById('risk'); // range input voor risk (%)
-	const riskVal = document.getElementById('risk-val'); // label dat huidige risk toont
-	const goBtn = document.getElementById('go'); // GO knop element
-	const resetBtn = document.getElementById('reset'); // Reset knop element
-	const messageEl = document.getElementById('message'); // gebied voor statusmeldingen
-	const historyEl = document.getElementById('history'); // lijst met recente rondes
-	const barFill = document.getElementById('bar-fill'); // visuele balk die roll toont
-	const barThreshold = document.getElementById('bar-threshold'); // visuele threshold positie
-	const barText = document.getElementById('bar-text'); // tekst onder de balk met roll %
-	const celebrateEl = document.getElementById('celebrate'); // element voor win-animatie / emoji
+const balanceEl = document.querySelector('#balance');          // toont huidig saldo
+const stakeInput = document.querySelector('#stake');           // input voor inzet
+const riskInput = document.querySelector('#risk');             // range input voor risk (%)
+const riskVal = document.querySelector('#risk-val');           // label dat huidige risk toont
+const goBtn = document.querySelector('#go');                   // GO knop element
+const resetBtn = document.querySelector('#reset');             // Reset knop element
+const messageEl = document.querySelector('#message');          // gebied voor statusmeldingen
+const historyEl = document.querySelector('#history');          // lijst met recente rondes
+const barFill = document.querySelector('#bar-fill');           // visuele balk die roll toont
+const barThreshold = document.querySelector('#bar-threshold'); // visuele threshold positie
+const barText = document.querySelector('#bar-text');           // tekst onder de balk met roll %
+const celebrateEl = document.querySelector('#celebrate');      // element voor win-animatie / emoji
 
 	// NIEUW: outputs voor multiplier en payout
 	const multiplierOut = document.getElementById('multiplierOut'); // toont multiplier (×)
