@@ -1,7 +1,4 @@
-// Start saldo
 let balance = 100;
-
-// Elementen ophalen (ALLEEN querySelector)
 const balanceText   = document.querySelector("#balance");
 const stakeInput    = document.querySelector("#stake");
 const riskInput     = document.querySelector("#risk");
